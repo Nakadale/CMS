@@ -1,0 +1,98 @@
+/* START: DEFINING THE STANDARD FOOTER */
+
+#footerStandard {
+  	margin:0 auto;
+  	width: 100%;
+	height: 600px;
+  	background-color: #313131;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	}
+
+#footerStandard > a {
+	color:#ffffff;
+	text-decoration:none
+	}
+	
+#footerStandard > a:hover {
+	background-color: #666666;
+	color:#ffcc66;
+	text-decoration:none;
+	}
+
+#footerStandardBody {
+  	margin:0 auto;
+  	width: 1190px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+  	background-color: #313131;
+	}
+
+#footerStandardBody > ul {
+	list-style-type: none;
+	margin-top: 20px;
+	margin-left: 10px;
+	font-size: 14px;
+	}
+	
+#footerStandardBody > ul > li {
+	padding-left: 10px;
+	padding-bottom: 10px; 
+	}
+
+#footerStandardBody > a {
+	color: #cccccc;
+	}
+
+#footerStandardBody > a:hover {
+	color: #fed80c;
+	}
+
+#subfooter01 {
+  	float: left;
+  	width: 293px;
+	border-right: solid 5px transparent;
+  	background-color: #313131;
+  	}
+
+#subfooter02{
+  	float: left;
+  	width: 287px;
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+  	background-color: #313131;
+  	}
+
+#sufooter03{
+  	float: left;
+  	width: 287px;
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+  	background-color: #313131;
+  	}
+
+#subfooter04{
+  	float: right;
+  	width: 293px;
+	height: 580px;
+	border-left: solid 5px transparent;
+  	background: #313131  url(../Images/sealPh.png) no-repeat center top;
+  	}
+	
+/* END: DEFINING THE STANDARD FOOTER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

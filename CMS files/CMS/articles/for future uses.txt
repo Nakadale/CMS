@@ -1,0 +1,24 @@
+<!--
+Begin
+function formHandler(menu){
+var URL = document.menu.tides.options[document.menu.tides.selectedIndex].value;
+}
+// En
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+
+
+<script type="text/javascript">
+		$(window).load(function() {
+			$('.flexslider').flexslider();
+		});
+</script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $('a[rel*=facebox]').facebox() 
+    })
+</script>

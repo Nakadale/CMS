@@ -1,0 +1,133 @@
+body {	
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+#content {
+	width: 700px;
+	margin: 0px auto;
+}
+
+h1 {
+	margin: 0;
+}
+
+hr {
+	border: none;
+	height: 1px; 
+	line-height: 1px;
+	background: #CCC;	
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+p {
+	margin: 0;	
+	padding: 7px 0;
+}
+
+.clear {
+	clear: both;
+	line-height: 1px;
+	font-size: 1px;
+}
+
+a { 
+	outline-color: #888;	
+}
+
+/* DEFINE ELEMENTS OF FEATURE LIST */
+
+h3 {
+			margin: 0;	
+			padding: 7px 10px 0px 0px;
+			font-size: 12px;
+			text-align: right;
+		}
+
+		div#feature_list {
+			background: #ffffff;
+			border: 0px solid #e8e7e7;
+			width: 700px;
+			height: 395px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		div#feature_list ul {
+			position: absolute;
+			top: 0;
+			list-style: none;	
+			padding: 0;
+			margin: 0;
+		}
+
+		ul#tabs {
+			left: 650px;
+			z-index: 2;
+		}
+
+		ul#tabs li {
+			font-size: 14px;
+			font-family: Georgia;
+			text-align: center;
+			height: 35px;
+			width: 35px;
+			opacity:0.9;
+			filter:Alpha(opacity=90); /* IE8 and earlier */
+		}
+
+		ul#tabs li a {	
+			display: block;
+			color: #333;
+			text-decoration: none;
+			height: 25px;
+			outline: none;
+		}
+
+		ul#tabs li a:hover {
+			color: #d80351;
+			text-decoration: none;
+		}
+
+		ul#tabs li a.current {
+			background-color: #d80351;
+			color: #FFF;
+		}
+
+		ul#tabs li a.current:hover {
+			text-decoration: none;
+			cursor: default;
+		}
+
+		ul#output {
+			left: 0;
+			width: 700px;
+			height: 395px;
+			position: relative;
+		}
+
+		ul#output li {
+			position: absolute;
+			width: 700px;
+			height: 395px;
+			left: 0px;
+			top: 0px;
+		}
+
+		ul#output li a {
+			position: absolute;
+			bottom: 20px;
+			left: 515px;
+			padding: 8px 12px;
+			text-decoration: none;
+			font-size: 11px;
+			color: #FFF;
+			background: #d80351;
+			-moz-border-radius: 5px;
+		}
+		
+		ul#output li a:hover {
+			background: #00a3ee;
+		}

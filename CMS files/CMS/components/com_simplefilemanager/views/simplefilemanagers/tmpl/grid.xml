@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="com_simplefilemanager_simplefilemanagers_view_grid_title" option="com_simplefilemanager_simplefilemanagers_view_grid_option">
+		<message>
+			<![CDATA[com_simplefilemanager_simplefilemanagers_view_grid_desc]]>
+		</message>
+	</layout>
+	
+	<fields name="request">
+		<fieldset name="request">
+			<field
+				name="catid"
+				type="category"
+				extension="com_simplefilemanager"
+				class="inputbox"
+				default=""
+				label="COM_SIMPLEFILEMANAGER_FIELD_CATID_LABEL"
+				description="COM_SIMPLEFILEMANAGER_FIELD_CATID_DESC"
+				required="true"
+			>
+				<option value="0">JOPTION_SELECT_CATEGORY</option>
+			</field>
+			<field
+				name="showDate"
+				type="radio"
+				default="1"
+				label="COM_SIMPLEFILEMANAGER_FIELD_SHOWDATE_LABEL"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field
+				name="showNew"
+				type="radio"
+				default="1"
+				label="COM_SIMPLEFILEMANAGER_FIELD_SHOWNEW_LABEL"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field
+				name="showSize"
+				type="radio"
+				default="1"
+				label="COM_SIMPLEFILEMANAGER_FIELD_SHOWSIZE_LABEL"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field
+				name="orderBy"
+				type="list"
+				default="a.ordering"
+				label="COM_SIMPLEFILEMANAGER_FIELD_ORDERBY_LABEL"
+			>
+				<option value="a.ordering">JFIELD_ORDERING_LABEL</option>
+				<option value="a.file_created">COM_SIMPLEFILEMANAGER_HEADING_CREATED</option>
+				<option value="a.title">COM_SIMPLEFILEMANAGER_HEADING_TITLE</option>
+				<option value="a.file_size">COM_SIMPLEFILEMANAGER_HEADING_SIZE</option>
+			</field>
+			<field
+				name="order"
+				type="list"
+				default="ASC"
+				label="COM_SIMPLEFILEMANAGER_FIELD_ORDER_LABEL"
+			>
+				<option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+				<option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

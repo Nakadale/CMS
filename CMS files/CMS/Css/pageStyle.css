@@ -1,0 +1,770 @@
+/* DEFINING THE BODY */
+
+h3 {
+font-size: 26px;
+}
+
+th {
+	background: #f1f1f1;
+}
+
+td {
+	background: #e1e1e1;
+}
+
+.bodytest {
+  	background:  #ffffff;
+	margin: 0 auto;
+	font-size: 16px;
+  	}
+
+body {
+  	background:  #ffffff url(../Images/bgPage.png) repeat-x;
+	margin: 0 auto;
+  	color: #333333;
+	font-size: 16px;
+  	}
+	
+	
+	
+@font-face {
+	font-family: myFirstFont;
+	src: url(../Fonts/KozGoPro-Light_0.otf);
+	}
+	
+p {
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  	text-align: left; 
+	line-height: 22px;
+	letter-spacing: 1px;
+	padding: 20px 0px 0px 0px;
+	color:#333333;
+	text-align: justify;
+	}
+
+p a {
+	color:#0099ff;
+	text-decoration:none
+	}
+	
+p a:hover {
+	background-color: #666666;
+	color:#ffcc66;
+	text-decoration:none;
+	}
+
+td a {
+	color:#0099ff;
+	text-decoration:none
+	}
+	
+td a:hover {
+	background-color: #666666;
+	color:#ffcc66;
+	text-decoration:none;
+	}
+
+img a {
+	color:#0099ff;
+	text-decoration:none
+	}
+	
+img a:hover {
+	background-color: #666666;
+	color:#ffcc66;
+	text-decoration:none;
+	}
+	
+a {
+	color:#0099ff;
+	text-decoration:none
+	}
+	
+a:hover {
+	color:#fed80c;
+	text-decoration:none;
+	}
+	
+#bodyText ul {
+	text-align: left;
+	padding: 20px 0px 0px 30px;
+	}
+	
+#bodyText li {
+  	background:  url(../images/bulletMenuMini.png) left no-repeat;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  	text-align: left;
+	line-height: 22px;
+	letter-spacing: 1px;
+	padding: 0px 0px 0px 30px;
+	color:#333333;
+	}
+	
+#bodyText a {
+	color:#0099ff;
+	text-decoration:none
+	}
+	
+#bodyText a:hover {
+	background-color: #666666;
+	color:#ffcc66;
+	text-decoration:none;
+	}
+
+.top{
+	position:relative;
+	z-index:2;
+	top:800px;
+	}
+
+.navigation{
+	z-index:1;
+	}
+	
+.navigation li{
+	text-align: left;
+	}
+	
+.navigation li:hover{
+	cursor: pointer;
+	background-color: #666666;
+	color: #fed80c;
+	}
+	
+.buttonBanner {
+	font-family:  myFirstFont, "Century Gothic", Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	padding: 5px 15px 5px 15px;
+	}
+	
+.buttonBanner a {
+	background-color: #fed80c;
+	color: #666666;
+	padding: 5px 15px 5px 15px;
+	}
+	
+.buttonBanner a:hover {
+	background-color: #666666;
+	color: #fed80c;
+	padding: 5px 15px 5px 15px;
+	}
+
+/* START: DEFINING THE TOP BAR */	
+#topbar {
+  	background-color: #222222;
+	width: 100%;
+	height: 45px;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	clear:both;
+  	}
+
+.row {
+	width: 1190px;
+	max-width: 100%;
+	margin: 0 auto;
+	}
+
+.row a {
+	color:#ffffff;
+	text-decoration:none
+	}
+	
+.row a:hover {
+	background-color: #666666;
+	color:#ffcc66;
+	text-decoration:none;
+	}
+
+.row ul {
+	display: block;
+	list-style-type: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: #FFFFFF;
+	}
+	
+.row ul li {
+	display: inline;
+	padding-right: 50px; 
+	}
+	
+/* END: DEFINING THE TOP BAR */
+
+/* START: DEFINING THE MASTHEAD */
+#masthead {
+	margin: 0 auto;
+	width: 100%;
+	background-color: #5e9ac0;
+	opacity:0.95;
+	filter:alpha(opacity=95); /* For IE8 and earlier */
+	}
+	
+#mastheadLogo {
+	width: 1190px;
+	max-width: 100%;
+	margin: 0 auto;
+	color: #FFFFFF;
+	}
+	
+#masthead a {
+	color:#0099ff;
+	text-decoration:none
+	}
+	
+#masthead a:hover {
+	background-color: #5e9ac0;
+	color:#fed80c;
+	text-decoration:none;
+	}
+
+	
+/* END: DEFINING THE MASTHEAD */
+
+/* START: DEFINING THE MAIN MENU */	
+
+#mainMenu {
+  	margin:0 auto;
+  	width: 100%;
+	height: 70px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 0px;
+  	background:  #cccccc url(../Images/bgMainMenu.png) repeat-x;
+	} 
+	
+#breadcrumb {
+	background-color: #cccccc;
+	height: 40px;
+  	width: 1190px;
+	overflow: auto;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  	}
+	
+#mainMenu1 {
+  	margin: -55px auto;
+  	width: 1190px;
+	height: 200px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+	border-bottom:1px dotted #f1f1f1; 
+  	background:  url(../Images/bgMenu.png) repeat-x;
+  	}
+
+#mainMenu01 {
+  	float: left;
+  	width: 297px;
+	border-right: dotted 1px #ffffff;
+	border-top: dotted 0px #bfbfbf;
+  	}
+
+#mainMenu02{
+  	float: left;
+  	width: 296px;
+	border-right: dotted 1px #ffffff;
+	border-top: dotted 0px #bfbfbf;
+  	}
+
+#mainMenu03{
+  	float: left;
+  	width: 296px;
+	border-right: dotted 1px #ffffff;
+	border-top: dotted 0px #bfbfbf;
+  	}
+
+#mainMenu04{
+  	float: right;
+  	width: 298px;
+	border-top: dotted 0px #bfbfbf;
+  	}
+	
+.mainMenuTitle {
+	display: block;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	}
+	
+.mainMenuTitle a {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #fed80c;
+	color: #666666;
+  	}
+	
+.mainMenuTitle a:hover {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #666666;
+	color: #fed80c;
+  	}
+	
+.mainMenuText {
+	padding: 20px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	line-height: 20px;
+	text-align: justify;
+	}
+	
+.indicator {
+	padding-left: 20px;
+	text-align: left;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+	}
+	
+/* END: DEFINING THE MAIN MENU *
+
+/* START: DEFINING THE MAIN BODY */
+#mainBody {
+  	margin: 80px auto;
+  	width: 1190px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	}
+	
+#mainBodyTitle {
+	font-size: 40px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	letter-spacing: 2px;
+	font-variant: small-caps;
+	}
+	
+#leftBody {
+	width: 769px;
+	float: left;
+	border-right: solid 15px transparent;
+	border-left: solid 10px transparent;
+	text-align: right;
+	}
+	
+#rightBody {
+	width: 371px;
+	float: right;
+	border-left: solid 15px transparent;
+	border-right: solid 10px transparent;
+	text-align: left;
+	}
+	
+.boxText {
+	font-size: 20px;
+	font-style: italic;
+	color: #666666;
+	padding-left: 150px;
+	letter-spacing: 2px;
+	line-height: 30px;
+	}
+
+#pageMenuColumn {
+	margin-top: 25px;
+  	background-color: #ffffff;
+  	float: left;
+  	width: 370px;
+	text-align: left;
+	font-size: 20px;
+  }
+	
+.menu {
+	font-size: 20px;
+	color: #666666;
+	font-weight: bold;
+	letter-spacing: 1px;
+	}
+	
+.menuSub {
+	display: block;
+	margin-top: -24px;
+	color: #666666;
+	background-color: #f5f5f5;
+  	text-decoration: none;
+	border-bottom: 5px solid #ffffff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	}
+
+.menuSub a {
+	display: block;
+	background-color: #f5f5f5;
+	color: #0099ff;
+  	text-decoration: none;
+  }
+
+.menuSub a:hover {
+	display: block;
+	background-color: #666666;
+	color: #fed80c;
+  	text-decoration: none;
+  }
+	
+.newsDate {
+	font-size: 12px;
+	color: #666666;
+	letter-spacing: 1px;
+	padding-top: 30px;
+	padding-bottom: 0px;
+	}
+	
+.sectionHeader {
+	font-size: 24px;
+	color: #666666;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 10px 8px 10px 9px;
+	}
+	
+.functions {
+	margin-top:15px;
+	padding: 10px 8px 10px 9px;
+	border: 1px dotted #cccccc;
+	}
+	
+.functionsHeader {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top:15px;
+	padding: 0px 0px 0px 0px;
+	}
+	
+.heading {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top:15px;
+	padding: 20px 0px 10px 0px;
+	}
+	
+.functions img {
+	border: 1px solid #cccccc;
+	}
+	
+.newsBody {
+	font-size: 16px;
+	color: #666666;
+	letter-spacing: 1px;
+	line-height: 22px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: justify;
+	}
+	
+/* END: DEFINING THE MAIN BODY */
+
+/* START: DEFINING THE SUB BODY_01 */
+
+#subBody01 {
+  	margin:0 auto;
+  	width: 1190px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 50px;
+	}
+	
+#leftBody01 {
+	width: 570px;
+	float: left;
+	border-right: solid 15px transparent;
+	border-left: solid 10px transparent;
+	text-align: right;
+	}
+	
+.mapDate {
+	font-size: 12px;
+	color: #666666;
+	letter-spacing: 1px;
+	padding-top: 10px;
+	}
+	
+.mapDate a {
+	color:#0099ff;
+	text-decoration:none
+	}
+	
+.mapDate a:hover {
+	background-color: #666666;
+	color:#fed80c;
+	text-decoration:none;
+	}
+	
+#rightBody01 {
+	width: 570px;
+	float: right;
+	border-left: solid 15px transparent;
+	border-right: solid 10px transparent;
+	text-align: left;
+	}
+	
+.downloads {
+	display: block;
+	background-color: #f3f3f3;
+	padding: 20px;
+	margin-top: 15px;
+	}
+	
+.downloadsDate {
+	font-size: 12px;
+	color: #666666;
+	letter-spacing: 1px;
+	padding-bottom: 0px;
+	}
+	
+.downloadsTitle {
+	font-size: 24px;
+	color: #666666;
+	letter-spacing: 1px;
+	padding-top: 10px;
+	}
+	
+.downloadsTitle a {
+	color:#0099ff;
+	text-decoration:none
+	}
+	
+.downloadsTitle a:hover {
+	background-color: #666666;
+	color:#fed80c;
+	text-decoration:none;
+	}
+	
+/* END: DEFINING THE SUB BODY_01 */
+
+/* START: DEFINING THE SUB BODY_02 */
+
+#subBody02 {
+  	margin:0 auto;
+  	width: 1190px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 50px;
+	padding-bottom: 0px;
+	}
+
+#subBody0201 {
+  	float: left;
+  	width: 293px;
+	border-right: solid 5px transparent;
+  	}
+
+#subBody0202{
+  	float: left;
+  	width: 287px;
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+  	}
+
+#subBody0203{
+  	float: left;
+  	width: 287px;
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+  	}
+
+#subBody0204{
+  	float: right;
+  	width: 293px;
+	border-left: solid 5px transparent;
+  	}
+	
+/* END: DEFINING THE SUB BODY_02 */
+
+/* START: DEFINING THE SUB BODY_03 */
+
+#subBody03 {
+  	margin:0 auto;
+  	width: 1190px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	}
+	
+/* END: DEFINING THE SUB BODY_03 */
+
+/* START: DEFINING THE AGENCY FOOTER */
+
+#footerAgency {
+  	margin:0 auto;
+  	width: 100%;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 0px;
+  	background:  #5e9ac0 url(../Images/footerAgency.png) repeat-x;
+	}
+
+#footerAgencyBody {
+  	margin:0 auto;
+  	width: 1190px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+  	background:  url(../Images/footerAgencyBg.png) no-repeat center top;
+	}
+	
+#footerAgencyBody a {
+	color:#666666;
+	text-decoration:none
+	}
+	
+#footerAgencyBody a:hover {
+	background-color: #666666;
+	color:#fed80c;
+	text-decoration:none;
+	}
+  
+.inquiry {
+	margin: 0px 0px 0px 30px;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	text-align: left;
+	font-size: 14px;
+  }
+	
+.button {
+	margin-top: 30px;
+	font-size: 14px;
+	background-color: #fed80c;
+	font-family:  myFirstFont, "Century Gothic", Verdana, Arial, Helvetica, sans-serif;
+	color: #666666;
+	font-weight: bold;
+	padding: 5px 15px 5px 15px;
+	vertical-align: middle;
+	}
+	
+.button a:hover {
+	margin-top: 30px;
+	font-size: 14px;
+	background-color: #666666;
+	font-family:  myFirstFont, "Century Gothic", Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 5px 15px 5px 15px;
+	vertical-align: middle; 
+	}
+	
+/* END: DEFINING THE  AGENCY FOOTER */
+
+/* START: DEFINING THE STANDARD FOOTER */
+
+#footerStandard {
+  	margin:0 auto;
+  	width: 100%;
+	height: 600px;
+  	background-color: #313131;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	}
+
+#footerStandard a {
+	color:#ffffff;
+	text-decoration:none
+	}
+	
+#footerStandard a:hover {
+	background-color: #666666;
+	color:#ffcc66;
+	text-decoration:none;
+	}
+
+#footerStandardBody {
+  	margin:0 auto;
+  	width: 1190px;
+	clear:both;
+	font-family:  myFirstFont, "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+  	background-color: #313131;
+	}
+
+#footerStandardBody ul {
+	list-style-type: none;
+	margin-top: 20px;
+	margin-left: 10px;
+	font-size: 14px;
+	}
+	
+#footerStandardBody ul li {
+	padding-left: 10px;
+	padding-bottom: 10px; 
+	}
+
+#footerStandardBody a {
+	color: #cccccc;
+	}
+
+#footerStandardBody a:hover {
+	color: #fed80c;
+	}
+
+#subfooter01 {
+  	float: left;
+  	width: 293px;
+	border-right: solid 5px transparent;
+  	background-color: #313131;
+  	}
+
+#subfooter02{
+  	float: left;
+  	width: 287px;
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+  	background-color: #313131;
+  	}
+
+#sufooter03{
+  	float: left;
+  	width: 287px;
+	border-left: solid 5px transparent;
+	border-right: solid 5px transparent;
+  	background-color: #313131;
+  	}
+
+#subfooter04{
+  	float: right;
+  	width: 293px;
+	height: 580px;
+	border-left: solid 5px transparent;
+  	background: #313131  url(../Images/sealPh.png) no-repeat center top;
+  	}
+	
+/* END: DEFINING THE STANDARD FOOTER */
+
+.back-to-top {
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(51, 51, 51, 1.0);
+    font-size: 16px;
+	font-weight: bold;
+    padding-top: 15px;
+	padding-bottom: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+    display: none;
+}
+
+.back-to-top:hover {    
+    background-color: #666666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
