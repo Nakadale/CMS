@@ -1,0 +1,31 @@
+SELECT file_title, If(((cat_id = 9) or (cat_id = 5)),url_download,"") as Maps,
+ If(((cat_id = 11) OR (cat_id = 10)),url_download,"") as Publications,
+ If(cat_id = 12,url_download,"") as Others
+FROM `b96e8_jdownloads_files`
+where cat_id not in (7,8,4,0)
+order by date_added DESC
+
+
+SELECT file_title,If(((cat_id = 9) or (cat_id = 5)),url_download,"") as Maps, cat_dir
+FROM `b96e8_jdownloads_files` as files
+left outer join `b96e8_jdownloads_categories` as categories on files.cat_id = categories.id
+where cat_id not in (7,8,4,0,12,10,11)
+order by date_added DESC
+
+SELECT file_title,If(((cat_id = 11) OR (cat_id = 10)),url_download,"") as Publications, cat_dir
+FROM `b96e8_jdownloads_files` as files
+left outer join `b96e8_jdownloads_categories` as categories on files.cat_id = categories.id
+where cat_id not in (7,8,4,9,5,12,0)
+order by date_added DESC
+
+select file_title,If(cat_id = 12,url_download,"") as Others
+FROM `b96e8_jdownloads_files` as files
+where cat_id not in (7,8,4,0,10,11,5,9)
+order by date_added DESC
+
+
+SELECT file_title,If(((cat_id = 9) or (cat_id = 5)),url_download,'') as Maps, cat_dir
+FROM `b96e8_jdownloads_files` as files
+left outer join `b96e8_jdownloads_categories` as categories on files.cat_id = categories.id
+where cat_id not in (7,8,4,0,12,10,11)
+order by date_added DESC
