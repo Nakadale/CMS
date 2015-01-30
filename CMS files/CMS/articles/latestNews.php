@@ -7,7 +7,7 @@
 				error_reporting(0);
 					
 				//sql query to get specific data from the database
-				$strSQL = "SELECT * FROM `b96e8_content` WHERE state = 1 and catid <> 10 order by publish_up LIMIT 5";
+				$strSQL = "SELECT * FROM `b96e8_content` WHERE state = 1 and catid <> 10 order by publish_up DESC LIMIT 5";
 				$objQuery = mysqli_query($objConnect,$strSQL) or die ("Error Query [".$strSQL."]");
 				?>
 
@@ -17,7 +17,7 @@
 				{
 				?>
 					<ul class="navi">
-						<a href="/cms/list.php?id=<?php echo $objResult["asset_id"];?>&alias=<?php echo $objResult["alias"];?>&Archive=1">	
+						<a href="/list.php?id=<?php echo $objResult["asset_id"];?>&alias=<?php echo $objResult["alias"];?>&Archive=1">	
 					<li class="menuSub">
 								<?php echo $objResult["title"]; ?>
 					</li>

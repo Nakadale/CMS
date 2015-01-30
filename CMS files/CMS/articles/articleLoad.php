@@ -61,7 +61,7 @@
 							while($objResult = mysqli_fetch_array($objQuery))
 							{    
 							?>
-							<a href="/cms/list.php?id=<?php echo $objResult["asset_id"];?>&alias=<?php echo $objResult["alias"];?>&Archive=1">
+							<a href="/list.php?id=<?php echo $objResult["asset_id"];?>&alias=<?php echo $objResult["alias"];?>&Archive=1">
 							&lt;Previous</a>
 							<?php
 							}
@@ -92,7 +92,7 @@
 							while($objResult = mysqli_fetch_array($objQuery))
 							{    
 							?>
-							<a href="/cms/list.php?id=<?php echo $objResult["asset_id"];?>&alias=<?php echo $objResult["alias"];?>&Archive=1">
+							<a href="/list.php?id=<?php echo $objResult["asset_id"];?>&alias=<?php echo $objResult["alias"];?>&Archive=1">
 							Next&gt;</a>
 							<?php
 							}

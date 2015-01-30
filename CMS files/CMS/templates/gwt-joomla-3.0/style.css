@@ -54,7 +54,8 @@ background: #cccccc;
 	#auxiliary {background: #333;}
 	
 	/* breadcrumbs span */
-	.breadcrumbs {margin-top: 10px; background: #fcfcfc; border-color: #f2f2f2;}
+	/*.breadcrumbs {margin-top: 10px; background: #fcfcfc; border-color: #f2f2f2;}*/
+	.breadcrumbs { background: #fcfcfc; border-color: #f2f2f2;}
 	.breadcrumbs span.current {color: #333;}
 	
 	/* time */
@@ -62,12 +63,12 @@ background: #cccccc;
 	.time .pst {font-size: 13px;}
 	
 	/* article info and pagination */
-	.print-icon, .email-icon{font-size: 0.75rem; float: left; text-transform: uppercase;}
+	.print-icon, .email-icon{font-size: 0rem; float: left; text-transform: uppercase;}
 	.edit-icon {font-size: 0rem; float: left; text-transform: uppercase;}
 	.print-icon, .email-icon {margin-right: 40px;}
-	.print-icon {list-style-image: url(images/system/printButton.png);}
-	.email-icon {list-style-image: url(images/system/emailButton.png);}
-	.edit-icon {list-style:-image: url(images/system/editButton.png);}
+	.print-icon {/*list-style-image: url(images/system/printButton.png);*/}
+	.email-icon {/*list-style-image: url(images/system/emailButton.png);*/}
+	.edit-icon {/*list-style:-image: url(images/system/editButton.png);*/}
 	.article-info, .tags, .post-box p {clear: left;}
 	.article-info-term {display: none;}
 	dd {display: inline-block; padding-right: 12px; font-size: 0.75rem; color: #999; }

@@ -89,7 +89,7 @@ abstract class JHtmlIcon
 		$link     = $base . JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid), false);
 		$url      = 'index.php?option=com_mailto&tmpl=component&template=' . $template . '&link=' . MailToHelper::addLink($link);
 
-		$status = 'width=400,height=350,menubar=yes,resizable=yes';
+		$status = 'width=220,height=260,menubar=yes,resizable=no';
 
 		if ($params->get('show_icons'))
 		{
@@ -223,7 +223,7 @@ abstract class JHtmlIcon
 		$url  = ContentHelperRoute::getArticleRoute($article->slug, $article->catid);
 		$url .= '&tmpl=component&print=1&layout=default&page=' . @ $request->limitstart;
 
-		$status = 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no';
+		$status = 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=no,width=640,height=480,directories=no,location=no';
 
 		// checks template image directory for image, if non found default are loaded
 		if ($params->get('show_icons'))
@@ -262,6 +262,7 @@ abstract class JHtmlIcon
 	public static function print_screen($article, $params, $attribs = array(), $legacy = false)
 	{
 		// Checks template image directory for image, if none found default are loaded
+		include 'articles/filesneeded.php';
 		if ($params->get('show_icons'))
 		{
 			if ($legacy)
@@ -278,7 +279,7 @@ abstract class JHtmlIcon
 			$text = JText::_('JGLOBAL_PRINT');
 		}
 
-		return '<a href="#" onclick="window.print();return false;">' . $text . '</a>';
+		return '<a href="#" onclick="window.print();return false;" class="print_button">' . $text . '</a>';
 	}
 
 }

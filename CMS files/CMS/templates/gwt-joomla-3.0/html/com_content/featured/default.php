@@ -19,7 +19,6 @@ JHtml::_('behavior.caption');
 <div class="blog-featured<?php echo $this->pageclass_sfx;?>">
 <!-- added by sherwin 08/1/2014 to add button menus to the top part. Default.php under com_content>featured -->
 <div class="recent">
-<h3>Recent Updates</h3>
 </div>
 <?php if ($this->params->get('show_page_heading') != 0) : ?>
 <div class="page-header">

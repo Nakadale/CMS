@@ -16,7 +16,7 @@
 				{
 				?>
 					<ul class="navi">
-						<a href="/cms/list.php?Month=<?php echo $objResult["Month"];?>&Year=<?php echo $objResult["Year"];?>&Archive=0">
+						<a href="/list.php?Month=<?php echo $objResult["Month"];?>&Year=<?php echo $objResult["Year"];?>&Archive=0">
 							<li class="menuSub">
 						<?php echo $objResult["date_added"]; ?>
 							</li>

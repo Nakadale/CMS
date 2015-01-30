@@ -69,8 +69,8 @@ foreach ($list as $i => &$item)
 		$class = ' class="' . trim($class) . '"';
 	}
 
-	echo '<li' . $class . '>';
-
+	echo '<li' . $class . '>'; 
+	
 	// Render the menu item.
 	switch ($item->type) :
 		case 'separator':

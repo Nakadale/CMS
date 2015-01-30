@@ -47,14 +47,7 @@ endif;
 	<fieldset>
 		<legend><?php echo JText::_('JEDITOR'); ?></legend>
 
-			<div class="formelm-buttons">
-			<button type="button" onclick="Joomla.submitbutton('article.save')">
-				<?php echo JText::_('JSAVE') ?>
-			</button>
-			<button type="button" onclick="Joomla.submitbutton('article.cancel')">
-				<?php echo JText::_('JCANCEL') ?>
-			</button>
-			</div>		
+
 		
 			<div class="formelm">
 			<?php echo $this->form->getLabel('title'); ?>
@@ -148,9 +141,9 @@ endif;
 		</span>
 
 		</div>
-		<div class="formelm">
-		<?php echo $this->form->getLabel('created_by_alias'); ?>
-		<?php echo $this->form->getInput('created_by_alias'); ?>
+		<div class="formelm"  style="height:0px;">
+		<?php //echo $this->form->getLabel('created_by_alias'); ?>
+		<?php //echo $this->form->getInput('created_by_alias'); ?>
 		</div>
 
 	<?php if ($this->item->params->get('access-change')): ?>
@@ -174,16 +167,46 @@ endif;
 		</div>
 
 	<?php endif; ?>
-		<div class="formelm">
-		<?php echo $this->form->getLabel('access'); ?>
-		<?php echo $this->form->getInput('access'); ?>
+		<div class="formelm" style="height:0px;">
+		<?php //echo $this->form->getLabel('access'); ?>
+		<?php //echo $this->form->getInput('access'); ?>
 		</div>
-		<?php if (is_null($this->item->id)):?>
+
+		
+			<div class="formelm-area" style="height:0px;">
+			<?php //echo $this->form->getLabel('metadesc'); ?>
+			<?php //echo $this->form->getInput('metadesc'); ?>
+			</div>
+			<div class="formelm-area">
+			<?php echo $this->form->getLabel('metakey'); ?>
+			<?php echo $this->form->getInput('metakey'); ?>
+			</div>
+
+			<?php if (is_null($this->item->id)):?>
 			<div class="form-note">
 			<p><?php echo JText::_('COM_CONTENT_ORDERING'); ?></p>
 			</div>
 		<?php endif; ?>
+			
+			<input type="hidden" name="task" value="" />
+			<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
+			<?php if($this->params->get('enable_category', 0) == 1) :?>
+			<input type="hidden" name="jform[catid]" value="<?php echo $this->params->get('catid', 1);?>"/>
+			<?php endif;?>
+			<?php echo JHtml::_( 'form.token' ); ?>
+			
+			
+			
+			<div class="formelm-buttons">
+			<button type="button" onclick="Joomla.submitbutton('article.save')">
+				<?php echo JText::_('JSAVE') ?>
+			</button>
+			<button type="button" onclick="Joomla.submitbutton('article.cancel')">
+				<?php echo JText::_('JCANCEL') ?>
+			</button>
+			</div>		
 	</fieldset>
+	
 
 	<!--<fieldset>
 		<legend><?php //echo JText::_('JFIELD_LANGUAGE_LABEL'); ?></legend>
@@ -193,23 +216,6 @@ endif;
 		</div>
 	</fieldset>-->
 
-	<fieldset>
-		<legend><?php echo JText::_('COM_CONTENT_METADATA'); ?></legend>
-		<div class="formelm-area">
-		<?php echo $this->form->getLabel('metadesc'); ?>
-		<?php echo $this->form->getInput('metadesc'); ?>
-		</div>
-		<div class="formelm-area">
-		<?php echo $this->form->getLabel('metakey'); ?>
-		<?php echo $this->form->getInput('metakey'); ?>
-		</div>
-
-		<input type="hidden" name="task" value="" />
-		<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />
-		<?php if($this->params->get('enable_category', 0) == 1) :?>
-		<input type="hidden" name="jform[catid]" value="<?php echo $this->params->get('catid', 1);?>"/>
-		<?php endif;?>
-		<?php echo JHtml::_( 'form.token' ); ?>
-	</fieldset>
+	
 </form>
 </div>

@@ -25,41 +25,44 @@ Joomla.submitbutton = function (pressbutton) {
 
 <?php $data = $this->get('data'); ?>
 
-<section id="mailto-window">
-    <h2>
-        <?php echo JText::_('COM_MAILTO_EMAIL_TO_A_FRIEND'); ?>
-    </h2>
+<!-- include script -->
+<?php include 'articles/filesneeded.php'; ?>
 
-    <a class="mailto-close" href="javascript: void window.close()" title="<?php echo JText::_('COM_MAILTO_CLOSE_WINDOW'); ?>">
-        <span><?php echo JText::_('COM_MAILTO_CLOSE_WINDOW'); ?></span>
-    </a>
+<section id="mailto-window">
+    <div>
+        <?php echo JText::_('COM_MAILTO_EMAIL_TO_A_FRIEND'); ?>
+    </div>
+	<p>
 
     <form action="<?php echo JURI::base() ?>index.php" id="mailtoForm" method="post">
 
         <label for="mailto_field">
             <?php echo JText::_('COM_MAILTO_EMAIL_TO'); ?>
+			<br>
             <input type="text" id="mailto_field" name="mailto" class="inputbox" size="25" value="<?php echo $this->escape($data->mailto) ?>" />
         </label>
-
+		<br>
         <label for="sender_field">
             <?php echo JText::_('COM_MAILTO_SENDER'); ?>
-            <input type="text" id="sender_field" name="sender" class="inputbox" value="<?php echo $this->escape($data->sender) ?>" size="25" />
+            <br>
+			<input type="text" id="sender_field" name="sender" class="inputbox" value="<?php echo $this->escape($data->sender) ?>" size="25" />
         </label>
-
+		<br>
         <label for="from_field">
             <?php echo JText::_('COM_MAILTO_YOUR_EMAIL'); ?>
-            <input type="text" id="from_field" name="from" class="inputbox" value="<?php echo $this->escape($data->from) ?>" size="25" />
+            <br>
+			<input type="text" id="from_field" name="from" class="inputbox" value="<?php echo $this->escape($data->from) ?>" size="25" />
         </label>
-
+		<br>
         <label for="subject_field">
             <?php echo JText::_('COM_MAILTO_SUBJECT'); ?>
-            <input type="text" id="subject_field" name="subject" class="inputbox" value="<?php echo $this->escape($data->subject) ?>" size="25" />
+            <br>
+			<input type="text" id="subject_field" name="subject" class="inputbox" value="<?php echo $this->escape($data->subject) ?>" size="25" />
         </label>
-
+		<br>
         <button class="button btn" onclick="return Joomla.submitbutton('send');">
             <?php echo JText::_('COM_MAILTO_SEND'); ?>
         </button>
-
         <button class="button btn" onclick="window.close();return false;">
             <?php echo JText::_('COM_MAILTO_CANCEL'); ?>
         </button>

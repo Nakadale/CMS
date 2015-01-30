@@ -90,100 +90,6 @@ $limits = $this->get('user_limits');
     <form action="<?php echo JRoute::_('index.php?option=com_jdownloads&a_id='.(int) $this->item->file_id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate" enctype="multipart/form-data" accept-charset="utf-8">
             
             <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo ($rules->uploads_maxfilesize_kb * 1024); ?>" />
-            
-        <fieldset>
-                <?php echo JText::_('COM_JDOWNLOADS_BACKEND_FILESEDIT_FIELD_INFO') ?> 
-                <div class="formelm-buttons">
-
-                <button type="button" onclick="Joomla.submitbutton('download.save')">
-                    <?php echo JText::_('COM_JDOWNLOADS_SAVE') ?>
-                </button>
-
-                <button type="button" onclick="Joomla.submitbutton('download.cancel')">
-                    <?php echo JText::_('COM_JDOWNLOADS_CANCEL') ?>
-                </button>
-
-                <?php if (!$new && ($this->item->params->get('access-delete') == true)): ?>):?>
-                    <button type="button" onclick="Joomla.submitbutton('download.delete')">
-                        <?php echo JText::_('COM_JDOWNLOADS_DELETE') ?>
-                    </button>
-                <?php endif; ?>
-                </div>
-                
-		    <legend>
-             <?php if (!$new){ ?> 
-                <?php echo JText::_('COM_JDOWNLOADS_EDIT_DOWNLOAD'); ?>
-             <?php } else { ?>
-                <?php echo JText::_('COM_JDOWNLOADS_ADD_NEW_DOWNLOAD'); ?>
-             <?php } ?>                
-             </legend>
-                
-			    <div class="formelm">
-			        <?php echo $this->form->getLabel('file_title'); ?>
-			        <?php echo $this->form->getInput('file_title'); ?>
-			    </div>
-
-            <?php if ($rules->form_alias):?>
-                <?php if ($new):?>
-			        <div class="formelm">
-			            <?php echo $this->form->getLabel('file_alias'); ?>
-			            <?php echo $this->form->getInput('file_alias'); ?>
-			        </div>
-		        <?php endif; ?>
-            <?php endif; ?>                
-            
-            <?php if ($rules->form_version):?>
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('release'); ?>
-                    <?php echo $this->form->getInput('release'); ?>
-                </div>
-            <?php endif; ?>
-                        
-            <?php if ($rules->form_update_active):?>
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('update_active'); ?>
-                    <?php echo $this->form->getInput('update_active'); ?>
-                </div>
-            <?php endif; ?>
-            
-            <?php if ($rules->form_file_language || $rules->form_file_system):?>
-                <div>
-                    <span style="margin:15px;"></span>
-                </div>
-            
-                <?php if ($rules->form_file_language):?>
-                    <div class="formelm">
-                        <?php echo $this->form->getLabel('file_language'); ?>
-                        <?php echo $this->form->getInput('file_language'); ?>
-                    </div>
-                <?php endif; ?>
-                
-                <?php if ($rules->form_file_system):?>            
-                    <div class="formelm">
-                        <?php echo $this->form->getLabel('system'); ?>
-                        <?php echo $this->form->getInput('system'); ?>
-                    </div>
-                <?php endif; ?>
-            <div>
-                <span style="margin:15px;"></span>
-            </div>            
-            <?php endif; ?>
-            
-            <?php if ($rules->form_license):?>             
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('license'); ?>
-                    <?php echo $this->form->getInput('license'); ?>
-                </div>                        
-            <?php endif; ?>
-
-            <?php if ($rules->form_confirm_license):?>                         
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('license_agree'); ?>
-                    <?php echo $this->form->getInput('license_agree'); ?>
-                </div>                        
-            <?php endif; ?>
-                                    
-       </fieldset> 
 
        <?php echo JHtml::_('tabs.start', 'jdlayout-sliders-'.$this->item->file_id, array('useCookie'=>1)); 
        ?>      
@@ -211,118 +117,11 @@ $limits = $this->get('user_limits');
       </fieldset>      
       <?php
            }
-           echo JHtml::_('tabs.panel', JText::_('COM_JDOWNLOADS_FORM_LABEL_TAB_PUBLISHING'),'publishing');
+           //echo JHtml::_('tabs.panel', JText::_('COM_JDOWNLOADS_FORM_LABEL_TAB_PUBLISHING'),'publishing');
       ?>
 
 <!-- Publishing TAB -->                        
-        
-        <fieldset>
-            <legend><?php echo JText::_('COM_JDOWNLOADS_FORM_LABEL_PUBLISHING'); ?></legend>
-
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('cat_id'); ?>
-                    <span class="category">
-                    <?php echo $this->form->getInput('cat_id'); ?>
-                    </span>
-                </div>
            
-            <?php if ($this->item->params->get('access-change') || $this->item->params->get('access-create') || $this->item->params->get('access-edit')): ?>
-                <?php if ($rules->form_access):?>
-                    <div class="formelm">
-                        <?php echo $this->form->getLabel('access'); ?>
-                        <?php echo $this->form->getInput('access'); ?>
-                    </div>
-            <?php endif; ?>
-
-            <?php if ($rules->form_language):?>                        
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('language'); ?>
-                    <?php echo $this->form->getInput('language'); ?>
-                </div>
-                <div>
-                    <span style="margin:15px;"></span>
-                </div> 
-            <?php endif; ?>            
-        <?php endif; ?>            
-            
-        <?php if ($this->item->params->get('access-change') || $this->item->params->get('access-create') || $this->item->params->get('access-edit')): ?>
-            <?php if ($rules->form_published):?>
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('published'); ?>
-                    <?php echo $this->form->getInput('published'); ?>
-                </div>
-            <?php endif; ?>            
-        <?php endif; ?>            
-            
-            <?php if ($rules->form_creation_date):?>
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('date_added'); ?>
-                    <?php echo $this->form->getInput('date_added'); ?>
-                </div>
-            <?php endif; ?>            
-
-            <?php if ($rules->form_modified_date):?>
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('modified_date'); ?>
-                    <?php echo $this->form->getInput('modified_date'); ?>
-                </div>
-                <div>
-                    <span style="margin:15px;"></span>
-                </div>             
-            <?php endif; ?>            
-            
-        <?php if ($this->item->params->get('access-change') || $this->item->params->get('access-create') || $this->item->params->get('access-edit')): ?>
-                    
-            <?php if ($rules->form_timeframe):?>
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('use_timeframe'); ?>
-                    <?php echo $this->form->getInput('use_timeframe'); ?>
-                </div>
-
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('publish_from'); ?>
-                    <?php echo $this->form->getInput('publish_from'); ?>
-                </div>
-                
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('publish_to'); ?>
-                    <?php echo $this->form->getInput('publish_to'); ?>
-                </div>
-                <div>
-                    <span style="margin:15px;"></span>
-                </div> 
-            <?php endif; ?>            
-
-            <?php if ($rules->form_views):?>                
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('views'); ?>
-                    <?php echo $this->form->getInput('views'); ?>
-                </div>
-            <?php endif; ?>            
-
-            <?php if ($rules->form_downloaded):?>            
-                <div class="formelm">
-                    <?php echo $this->form->getLabel('downloads'); ?>
-                    <?php echo $this->form->getInput('downloads'); ?>
-                </div>
-            <?php endif; ?>            
-                                    
-        <?php endif; ?>
-
-            <?php if ($rules->form_ordering):?> 
-                <?php if ($new){?>
-                    <div class="form-note">
-                          <p><?php echo JText::_('COM_JDOWNLOADS_FORM_ORDERING'); ?></p>
-                    </div>
-                <?php } else { ?>
-                    <div class="formelm">
-                        <?php echo $this->form->getLabel('ordering'); ?>
-                        <?php echo $this->form->getInput('ordering'); ?>
-                    </div>
-                <?php } ?>
-            <?php endif; ?>
-
-        </fieldset>      
       
 <!-- Additional TAB --> 
 
@@ -330,10 +129,25 @@ $limits = $this->get('user_limits');
 <!-- Files TAB -->
 
       <?php 
-       echo JHtml::_('tabs.panel', JText::_('COM_JDOWNLOADS_FORM_LABEL_TAB_FILES'),'files');
+       echo JHtml::_('tabs.panel', JText::_('COM_JDOWNLOADS_FORM_LABEL_TAB_FILES'),'Upload File');
       ?>        
 
         <fieldset>
+		
+		            <legend><?php echo JText::_('COM_JDOWNLOADS_FORM_LABEL_PUBLISHING'); ?></legend>
+					
+			    <div class="formelm">
+			        <?php echo $this->form->getLabel('file_title'); ?>
+			        <?php echo $this->form->getInput('file_title'); ?>
+			    </div>
+				<br>
+                <div class="formelm">
+                    <?php echo $this->form->getLabel('cat_id'); ?>
+                    <span class="category">
+                    <?php echo $this->form->getInput('cat_id'); ?>
+                    </span>
+                </div>
+				<br>
            <legend><?php echo JText::_('COM_JDOWNLOADS_FORM_LABEL_FILES'); ?></legend>
         
            <?php
@@ -467,6 +281,88 @@ $limits = $this->get('user_limits');
                     </div>  
                 </fieldset> 
         <?php endif; ?> 
+
+                <?php echo JText::_('COM_JDOWNLOADS_BACKEND_FILESEDIT_FIELD_INFO') ?> 
+                <div class="formelm-buttons">
+
+                <button type="button" onclick="Joomla.submitbutton('download.save')">
+                    <?php echo JText::_('COM_JDOWNLOADS_SAVE') ?>
+                </button>
+
+                <button type="button" onclick="Joomla.submitbutton('download.cancel')">
+                    <?php echo JText::_('COM_JDOWNLOADS_CANCEL') ?>
+                </button>
+
+                <?php if (!$new && ($this->item->params->get('access-delete') == true)): ?>):?>
+                    <button type="button" onclick="Joomla.submitbutton('download.delete')">
+                        <?php echo JText::_('COM_JDOWNLOADS_DELETE') ?>
+                    </button>
+                <?php endif; ?>
+                </div>
+					<br>
+
+            <?php if ($rules->form_alias):?>
+                <?php if ($new):?>
+			        <div class="formelm">
+			            <?php echo $this->form->getLabel('file_alias'); ?>
+			            <?php echo $this->form->getInput('file_alias'); ?>
+			        </div>
+		        <?php endif; ?>
+            <?php endif; ?>                
+            
+            <?php if ($rules->form_version):?>
+                <div class="formelm">
+                    <?php echo $this->form->getLabel('release'); ?>
+                    <?php echo $this->form->getInput('release'); ?>
+                </div>
+            <?php endif; ?>
+                        
+            <?php if ($rules->form_update_active):?>
+                <div class="formelm">
+                    <?php echo $this->form->getLabel('update_active'); ?>
+                    <?php echo $this->form->getInput('update_active'); ?>
+                </div>
+            <?php endif; ?>
+            
+            <?php if ($rules->form_file_language || $rules->form_file_system):?>
+                <div>
+                    <span style="margin:15px;"></span>
+                </div>
+            
+                <?php if ($rules->form_file_language):?>
+                    <div class="formelm">
+                        <?php echo $this->form->getLabel('file_language'); ?>
+                        <?php echo $this->form->getInput('file_language'); ?>
+                    </div>
+                <?php endif; ?>
+                
+                <?php if ($rules->form_file_system):?>            
+                    <div class="formelm">
+                        <?php echo $this->form->getLabel('system'); ?>
+                        <?php echo $this->form->getInput('system'); ?>
+                    </div>
+                <?php endif; ?>
+            <div>
+                <span style="margin:15px;"></span>
+            </div>            
+            <?php endif; ?>
+            
+            <?php if ($rules->form_license):?>             
+                <div class="formelm">
+                    <?php echo $this->form->getLabel('license'); ?>
+                    <?php echo $this->form->getInput('license'); ?>
+                </div>                        
+            <?php endif; ?>
+
+            <?php if ($rules->form_confirm_license):?>                         
+                <div class="formelm">
+                    <?php echo $this->form->getLabel('license_agree'); ?>
+                    <?php echo $this->form->getInput('license_agree'); ?>
+                </div>                        
+            <?php endif; ?>
+                                    
+       </fieldset> 
+		
         
 <!-- Images TAB -->      
 

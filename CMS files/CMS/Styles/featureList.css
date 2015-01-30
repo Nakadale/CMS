@@ -1,0 +1,137 @@
+body {	
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+#content {
+	width: 940px;
+	margin: 0px auto;
+}
+
+h1 {
+	margin: 0;
+}
+
+hr {
+	border: none;
+	height: 1px; 
+	line-height: 1px;
+	background: #CCC;	
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+p {
+	margin: 0;	
+	padding: 7px 0;
+}
+
+.clear {
+	clear: both;
+	line-height: 1px;
+	font-size: 1px; 
+}
+
+a { 
+	outline-color: #888;	
+}
+
+/* DEFINE ELEMENTS OF FEATURE LIST */
+
+h3 {
+			margin: 0;	
+			padding: 7px 10px 0px 0px;
+			font-size: 12px;
+			text-align: right;
+		}
+
+		div#feature_list {
+			background: #ffffff;
+			border: 10px solid #e8e7e7;
+			width: 900px;
+			height: 310px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		div#feature_list ul {
+			position: absolute;
+			top: 0;
+			list-style: none;	
+			padding: 0;
+			margin: 0;
+		}
+
+		ul#tabs {
+			right: 0;
+			z-index: 2;
+			width: 310px;
+		}
+
+		ul#tabs li {
+			font-size: 11px;
+			font-family: Verdana;
+			text-align: right;
+			height: 54px;
+		}
+		
+		ul#tabs li img {
+			padding: 3px;
+			border: 1px solid #cccccc;
+			float: right;
+			margin: 5px;
+		}
+
+		ul#tabs li a {
+			color: #222;
+			text-decoration: none;	
+			display: block;
+			height: 55px;
+			outline: none;
+		}
+
+		ul#tabs li a:hover {
+			color: #ff6600;
+			text-decoration: none;
+		}
+
+		ul#tabs li a.current {
+			background:  url('../images/featureIndicator.png');
+			color: #FFF;
+		}
+
+		ul#tabs li a.current:hover {
+			text-decoration: none;
+			cursor: default;
+		}
+
+		ul#output {
+			left: 0;
+			width: 610px;
+			height: 330px;
+			position: relative;
+		}
+
+		ul#output li {
+			position: absolute;
+			width: 610px;
+			height: 330px;
+			left: 0px;
+		}
+
+		ul#output li a {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			padding: 8px 12px;
+			text-decoration: none;
+			font-size: 11px;
+			color: #FFF;
+			background: #000;
+			-moz-border-radius: 5px;
+		}
+		
+		ul#output li a:hover {
+			background: #ff6600;
+		}

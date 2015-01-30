@@ -10,7 +10,7 @@
 include 'articles/dbconnect.php';
 
 // turn off any error messages in the page
-error_reporting(0);
+//error_reporting(0);
 
 //this is the query to list all the unpublished uploads in the database.
 //unpublished downloads will not appear in the downloads page and landing page.

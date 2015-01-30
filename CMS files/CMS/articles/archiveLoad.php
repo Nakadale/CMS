@@ -13,7 +13,7 @@ error_reporting(0);
 $strSQL = "SELECT DATE_FORMAT(publish_up,'%e %M %Y') as date_added,user.name,DATE_FORMAT(publish_up,'%m %Y') as date_publish, asset_id, title,alias,introtext 
 FROM `b96e8_content` 
 LEFT OUTER JOIN `b96e8_users` AS user ON `b96e8_content`.created_by = user.id
-WHERE state = 1 and catid <> 10 and MONTH(publish_up) = $Month and YEAR(publish_up) = $Year order by publish_up";
+WHERE state = 1 and catid <> 10 and MONTH(publish_up) = $Month and YEAR(publish_up) = $Year order by publish_up DESC";
 
 $objQuery = mysqli_query($objConnect,$strSQL) or die ("Error Query [".$strSQL."]");
 ?>

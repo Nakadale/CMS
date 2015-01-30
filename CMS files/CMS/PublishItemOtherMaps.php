@@ -6,6 +6,12 @@
 <body class="bodytest">
 </body>
 <table style="width:100%;border:solid #FFFFFF 2px;">
+	<tr class="NoticeTr">
+		<th class="OtherTH" style="width:25%"> File Name </th>
+		<th class="OtherTH" style="width:25%"> Date Uploaded </th>
+		<th class="OtherTH" style="width:25%"> Uploaded By </th>
+		<th class="OtherTH" style="width:25%"> Publish </th>
+	</tr>
 <?php
 include 'articles/dbconnect.php';
 
@@ -27,13 +33,6 @@ $objQuery = mysqli_query($objConnect,$strSQL) or die ("Error Query [".$strSQL."]
 	<form action="PublishItemOtherMaps.php" method="GET" name="frmPublish">
 	<input type="hidden" name="PublishBtn" value="">
 	<input type="hidden" name="id" value="">
-
-	<tr class="NoticeTr">
-		<th class="OtherTH" style="width:25%"> File Name </th>
-		<th class="OtherTH" style="width:25%"> Date Uploaded </th>
-		<th class="OtherTH" style="width:25%"> Uploaded By </th>
-		<th class="OtherTH" style="width:25%"> Publish </th>
-	</tr>
 		<?php 
 				// this while loop will list down all unpublished uploads taken from the result of the SQL query
 				while($objResult = mysqli_fetch_array($objQuery))

@@ -42,16 +42,19 @@ $data	= $this->get('data');
 			<label for="mailto_field"><?php echo JText::_('COM_MAILTO_EMAIL_TO'); ?></label>
 			<input type="text" id="mailto_field" name="mailto" class="inputbox" size="25" value="<?php echo $this->escape($data->mailto); ?>"/>
 		</div>
+		<p>
 		<div class="formelm">
 			<label for="sender_field">
 			<?php echo JText::_('COM_MAILTO_SENDER'); ?></label>
 			<input type="text" id="sender_field" name="sender" class="inputbox" value="<?php echo $this->escape($data->sender); ?>" size="25" />
 		</div>
+		<p>
 		<div class="formelm">
 			<label for="from_field">
 			<?php echo JText::_('COM_MAILTO_YOUR_EMAIL'); ?></label>
 			<input type="text" id="from_field" name="from" class="inputbox" value="<?php echo $this->escape($data->from); ?>" size="25" />
 		</div>
+		<p>
 		<div class="formelm">
 			<label for="subject_field">
 			<?php echo JText::_('COM_MAILTO_SUBJECT'); ?></label>
